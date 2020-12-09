@@ -1,5 +1,5 @@
 # build files
-#dist
+dist
 target
 build
 lib_managed
