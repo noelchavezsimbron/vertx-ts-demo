@@ -16,14 +16,7 @@ export class CurrencyRateDAO{
 
         console.log("succeeded query ")
 
-        const currencyRates:CurrencyRate[]=[]
-
-        for (let json of res.result()!) {
-
-          console.log("result",json);
-
-          currencyRates.push( new CurrencyRate(json.date,json.rate))
-        }
+        const currencyRates=new Array(...res.result()).map((json:any)=>new CurrencyRate(json.date,json.rate))
 
         resultHandler(Future.succeededFuture(currencyRates))
 
