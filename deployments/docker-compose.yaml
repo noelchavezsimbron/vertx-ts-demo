@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  mongo:
+    container_name: mongo-demo-vertx
+    image: mongo:latest
+    ports:
+    - "27017:27017"
+    volumes:
+    - ./mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    - ./mongo/configs:/etc/configs
+    networks:
+    - demo-vertx
+    env_file:
+      - .env
+  api:
+    container_name: api-demo-vertx
+    build:
+      context: ../
+      dockerfile: deployments/Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - demo-vertx
+networks:
+  demo-vertx:
+    name: demo-vertx

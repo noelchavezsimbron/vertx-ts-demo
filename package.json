@@ -1,0 +1,29 @@
+{
+  "name": "rates-es4x",
+  "version": "0.0.1",
+  "description": "Currency Rates Api",
+  "private": true,
+  "main": "./dist/src/app/index.js",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "es4x ./dist/src/app/index.js",
+    "pretest": "tsc",
+    "test": "es4x test dist/index.test.js",
+    "postinstall": "es4x install",
+    "dockerfile": "es4x dockerfile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.2.2",
+    "@vertx/unit": "^3.9.4",
+    "es4x-pm": "0.13.0"
+  },
+  "dependencies": {
+    "@vertx/core": "^3.9.4",
+    "@vertx/mongo-client": "^3.9.4",
+    "@vertx/web": "^3.9.4"
+  },
+  "mvnDependencies": []
+}

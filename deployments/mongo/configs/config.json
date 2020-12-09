@@ -1,0 +1,23 @@
+{
+ "admin": {
+   "user": "admin",
+   "pwd": "mongo"
+ },
+ "databaseName": "demo-vertx",
+ "users": [
+   {
+     "user": "vertx",
+     "pwd": "mongo",
+     "roles": [
+       "readWrite"
+     ]
+   },
+   {
+     "user": "qa-user",
+     "pwd": "qaISr3ad$.",
+     "roles": [
+       "read"
+     ]
+   }
+ ]
+}
