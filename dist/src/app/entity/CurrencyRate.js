@@ -12,6 +12,9 @@ class CurrencyRate {
     get rate() {
         return this._rate;
     }
+    static default() {
+        return new CurrencyRate("", 3.339);
+    }
     toJSONString() {
         return JSON.stringify({
             "rate": this === null || this === void 0 ? void 0 : this.rate

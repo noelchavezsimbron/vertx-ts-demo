@@ -1,30 +1,9 @@
 import {Router} from '@vertx/web';
-import {MongoClient} from "../../infrastructure/mongo";
-import {CurrencyRateService} from "../service/CurrencyRateService";
-import {CurrencyRateDAO} from "../dao/CurrencyRateDAO";
+import {Container} from "../container/container";
 
 export const register=(router:Router)=>{
 
-
-
-  const mongoConfig={
-    "host" : "34.86.208.231",
-    "port" : 27017,
-    "db_name":"payments-db-dev",
-    "username"   : "payments-admin-dev",
-    "password"   : "4$.d3vP4.i8K83.ads9$.",
-    "authSource" : "payments-db-dev",
-    "authMechanism"     : "SCRAM-SHA-1",
-  }
-
-
-  const mongoClient=MongoClient.create(vertx,mongoConfig)
-
-  console.log("mongoClient",mongoClient)
-
-  const currencyRateDAO=new CurrencyRateDAO()
-  const currencyRateService=new CurrencyRateService(mongoClient,currencyRateDAO)
-
+  const currencyRateService=Container.currencyRateService()
 
   router.get()
     .path("/rates")
