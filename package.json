@@ -5,6 +5,7 @@
   "private": true,
   "main": "./dist/src/app/index.js",
   "scripts": {
+    "build": "tsc",
     "prestart": "tsc",
     "start": "es4x ./dist/src/app/index.js",
     "pretest": "tsc",
