@@ -16,11 +16,11 @@ export class Container{
   public static  mongoClient():MongoClient {
 
     const mongoConfig={
-    "host" : "localhost",
+    "host" : "mongo-demo-vertx",
     "port" : 27017,
     "db_name":"demo-vertx",
     "username"   : "vertx",
-    "password"   : "mongo.",
+    "password"   : "mongo",
     "authSource" : "demo-vertx",
     "authMechanism": "SCRAM-SHA-1",
   }

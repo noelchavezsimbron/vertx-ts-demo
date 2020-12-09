@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.register = void 0;
-const container_1 = require("../container");
+const container_1 = require("../container/container");
 exports.register = (router) => {
     const currencyRateService = container_1.Container.currencyRateService();
     router.get()
