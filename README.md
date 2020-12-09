@@ -1,13 +1,13 @@
-#vertx-ts-demo
+# vertx-ts-demo #
 
-###Description
+### Description ###
 
 This Project is an example of a Rest Api with Vert.x in Typescript
 
 
 ![app](img/server.png)
 
-###Run the App
+### Run the App ###
 
 - Execute the following commands:
 ```
@@ -21,7 +21,7 @@ docker-compose -f deployments/docker-compose.yaml up -d --build
 
 ```
 
-###Consume Api Rest
+### Consume Api Rest ###
 
 ```
 #!bash
